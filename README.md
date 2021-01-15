@@ -74,3 +74,6 @@ If you were to describe this DAW in one sentence what would that sentence be? If
 + Are there new technologies (MIDI 2.0) that we can build upon?
 + Can we make it easier to compose music
 + Your idea could totally go here...
+
+## Background Reading
++ https://admiralbumblebee.com/DAW-Wants.html - essential reading.
