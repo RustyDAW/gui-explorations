@@ -1,0 +1,10 @@
+[package]
+name = "gui-explorations_command-palette"
+version = "0.1.0"
+authors = ["George Atkinson"]
+edition = "2018"
+
+[dependencies]
+tuix = {git = "https://github.com/geom3trik/tuix", branch = "develop"}
+femtovg = { git = "https://github.com/femtovg/femtovg", branch = "master"}
+fuzzy-matcher = "0.3.7"
