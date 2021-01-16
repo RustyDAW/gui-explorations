@@ -151,7 +151,7 @@ impl EventHandler for CommandPalette {
 
                             let (_, indices) = matcher.fuzzy_indices(&cmd.0, val).unwrap_or((0, vec![]));
 
-                            if let Some(command_widget) = state.hierarchy.get_child(self.scroll_container, index + 1) {
+                            if let Some(command_widget) = state.hierarchy.get_child(self.scroll_container, index) {
                                 
                                 if val.is_empty() {
                                     command_widget.set_text(state, &cmd.0);
@@ -161,7 +161,7 @@ impl EventHandler for CommandPalette {
                                     if score > 0 {
                                         command_widget.set_text(state, &cmd.0);
                                         command_widget.set_display(state, Display::Flexbox);
-                                        state.insert_event(Event::new(SearchLabelEvent::Highlight(indices)));
+                                        state.insert_event(Event::new(SearchLabelEvent::Highlight(indices)).target(command_widget));
                                     } else {
                                         command_widget.set_text(state, "");
                                         command_widget.set_display(state, Display::None);
@@ -289,9 +289,11 @@ impl EventHandler for SearchLabel {
         if let Some(search_label_event) = event.message.downcast::<SearchLabelEvent>() {
             match search_label_event {
                 SearchLabelEvent::Highlight(indices) => {
-                    self.indices = indices.clone();
+                    if event.target == entity {
+                        self.indices = indices.clone();
 
-                    state.insert_event(Event::new(WindowEvent::Redraw));
+                        state.insert_event(Event::new(WindowEvent::Redraw));                        
+                    }
                 }
             }
         }
