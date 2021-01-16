@@ -16,8 +16,7 @@ New user stories and benchmarks should be added using issues.
 Requirements can also be added as issues, but user stories are the preferred process.
 
 ### Adding User Stories
-User stories should follow this template:
-TODO
+User stories should use the [user story template](https://github.com/RustyDAW/gui-explorations/issues/1).
 
 ### Benchmarks
 Benchmarks should follow this template:
