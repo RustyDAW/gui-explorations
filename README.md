@@ -38,8 +38,8 @@ This DAW should:
 
 ## UI Feature Priority List
 The following features have been identified to work on initially:
-+ [o] Timeline
-+ [o] Short CUts & Command Palette
++ [ ] Timeline _started_
++ [ ] Short CUts & Command Palette _started_
 + [ ] Media Bin
 + [ ] Transport Bar
 + [ ] Routing UI
@@ -50,6 +50,19 @@ The following features have been identified to work on initially:
 + [ ] Color Palette
 
 Other features will be added as the main DAW project progresses.
+
+## Design Motivations
+
+### Automation
+Global automation, particularly when editing, is a pain in most DAWs. DAWs really do what the user thinks they should do, or it's hard to predict what they will do. We want to solve this problem.
+
+### Keyboard Shortcuts
+Keyboard shortcuts allow power users to be vastly more efficient, but they are rarely intuitive and require a lot of memorization. We would like to make keyboard shortcuts intuitive, learnable and easy to remember. We would also like to at least investigate ideas from applications such as VIM's modal editing to see if we can steal some of those ideas for power users.
+
+### Modes
+DAWs have a bunch of different modes, but don't make it clear what mode they're in. Consequently it's often easy for a user to forget which mode they're in and so do the wrong thing. Modal UIs are a well studied UX problem, but also unavoidable in a DAW.
+
+In this DAW it should always be obvious to the user which mode they're in, and how to change modes. There should also be a way to set to an initial mode quickly (e.g. by pressing escape).
 
 ## Additional Things that Need a Place
 + time signature changes
